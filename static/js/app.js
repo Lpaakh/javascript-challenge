@@ -1,11 +1,6 @@
 // from data.js
 var tableData = data;
 var tbody = d3.select("tbody");
-var rows = "";
-var date = "";
-// var city = "";
-
-
 
 // Select the button
 var button = d3.select("#filter-btn");
@@ -17,7 +12,7 @@ var form = d3.select("#form");
 button.on("click", runEnter);
 form.on("submit",runEnter);
 
-// Create function to populated table with desired data
+// Populate table with desired data
 function populateTable() {
     tableData.forEach((UFOSighting) => {
         var row = tbody.append("tr");
@@ -55,5 +50,5 @@ function runEnter() {
     populateTable();
 }
 
-// Populated the table on page load
+// Populate the table on page load
 populateTable();
